@@ -1,0 +1,58 @@
+
+
+
+安装完系统后的步骤
+
+1. 设置开机选择操作系统
+F12进开机启动->选择Linpus lite进入->在grub界面进入UEFI->输入密码->进入BIOS->调整开机启动顺序为ubuntu第一个->重启后即可选择
+
+
+2. 连手机热点上网，换源
+ubuntu20.04遇到那些清华源无法更新：将下述复制进/etc/apt/sources.list中(直接覆盖)
+	deb https://mirrors.ustc.edu.cn/ubuntu/ focal main restricted universe multiverse
+        deb https://mirrors.ustc.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+        deb https://mirrors.ustc.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+        deb https://mirrors.ustc.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+        
+3. 更换内核
+sudo apt-get install linux-image-5.15.0-121-lowlatency
+
+4. 装驱动rtl8852be——连无线网
+sudo apt-get update
+sudo apt-get upgrade
+xxxxxx(记得装依赖(Fedora的也要装))
+
+5. 禁止ubuntu系统更新和内核更新(firefox里有收藏)
+
+6. 装软件
+Ros安装（鱼香肉丝）(装mon launch:sudo apt install ros-noetic-rosmon-core)
+星火商店
+WeChat(缩放级别设置成)
+Clion官网安装(破解版(不要重新启动，关机后再开机))
+Anaconda官网安装
+pcl点云
+onlyoffice
+openmv IDE
+prince(用来md转pdf，同时需要进去css文件改字体(/usr/lib/prince/style/font.css),将chinese有关的删掉，为空即为默认字体)
+xTools(用来一键安装各种驱动以及软件)
+kernel mainline(一键安装内核)
+
+7. 同步时间
+sudo apt install ntpdate
+sudo ntpdate time.windows.com
+sudo hwclock --localtime --systohc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

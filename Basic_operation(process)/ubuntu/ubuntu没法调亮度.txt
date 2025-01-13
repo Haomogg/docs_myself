@@ -1,0 +1,11 @@
+
+1. sudo gedit /etc/default/grub
+把GRUB_CMDLINE_LINUX="" 
+改成GRUB_CMDLINE_LINUX="acpi_backlight=vendor"
+
+
+2. 进入/sys/class/backlight/amdgpu_bl0中，调整brightness文件中的数值
+
+
+
+

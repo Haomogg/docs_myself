@@ -1,0 +1,9 @@
+clion添加头文件
+
+include_directories(
+ include                         //这个include一定要放开
+  ${catkin_INCLUDE_DIRS} 	//这个也一定要保留(如果没了ros.h会找不到)
+  "/home/haomo/catkin_ws/src/plumbing_head/include/**"   //这里添加路径
+)
+
+

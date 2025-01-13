@@ -1,0 +1,11 @@
+[credential]
+	provider = generic
+[user]
+	name = haomogg
+	email = 385371785@qq.com
+[core]
+	autocrlf = input
+[http]
+	proxy = 127.0.0.1:7897
+[https]
+	proxy = 127.0.0.1:7897

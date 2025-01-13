@@ -1,0 +1,14 @@
+命令：
+rm -rf build
+rm -rf Cmakelists.txt
+mkdir build
+cd build
+sudo make uninstall
+sudo make clean
+cmake ..
+make -j2 或 make -j8 (j后面的数字表示一次性编译多少个文件)
+sudo make install
+
+
+
+

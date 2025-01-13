@@ -1,0 +1,19 @@
+fastlio
+直接git clone的fastlio包，编译的时候 Fastlio要改成fastlio
+livox_ros_drive全部改成drive2
+src所有文件+package.xml+cmakelists.txt
+一个都不能落掉
+
+livox_ros_drive2
+先cd进livox_ros_drive2
+./build.sh ROS1
+单独编译livox_ros_drive2
+
+再把cmakelists里的
+if(ROS_EDITION STREQUAL "ROS1") 
+else(ROS_EDITION STREQUAL "ROS2")
+```
+endif()
+注释掉
+
+再返回到总的工作空间，总体catkin_make
