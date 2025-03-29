@@ -1,0 +1,6 @@
+输入以下命令
+
+killall code
+pkill code
+rm -rf ~/.config/Code/*Cache*
+再打开即可

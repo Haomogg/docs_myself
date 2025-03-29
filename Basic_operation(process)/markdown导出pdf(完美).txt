@@ -1,6 +1,6 @@
 此方法在vscode上进行
 
-右键预览 -> open in browser -> ctrl+p -> 勾选打印背景！！！(这点很重要) -> 另存为即可
+右键预览 -> open in browser(一定要Google) -> ctrl+p -> 勾选打印背景！！！(这点很重要) -> 另存为即可
 
 
 

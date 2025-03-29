@@ -1,0 +1,33 @@
+anaconda
+1、下载镜像
+清华大学开源软件镜像站下载地址： https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/ 下拉到最低端选择Linux，选择最新版（32/64位）下载。
+2、在Downloads文件中单击鼠标右键 ，打开终端
+输入
+bash Anaconda3(自己的版本）-Linux-x86_64.sh 
+3、安装
+进入安装注册信息页面按照提示输入回车和yes。最后是否在bashrc中添加路径，选择“yes”就可以。
+4、验证
+运行python就可以看到已经安装好了，执行$ which python命令可以查看python路径。
+
+
+
+
+labelme
+1.创建conda环境
+
+conda create --name=labelme python=3.7
+
+2.进入虚拟环境
+
+conda activate labelme
+
+3.安装必要的pyqt5的包，指定5.14.0版本
+
+pip install -i https://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com pyqt5==5.14.0
+
+4.安装labelme
+
+pip install -i https://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com labelme
+
+5.labelme(若成功，则会显示图形界面)
+

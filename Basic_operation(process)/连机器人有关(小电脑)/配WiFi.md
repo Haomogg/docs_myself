@@ -1,3 +1,5 @@
+## 单台电脑调试一台车
+
 ![alt text](../md中的图片/配WiFi_1.jpg)
 ![alt text](../md中的图片/配WiFi_2.jpg)
 
@@ -15,6 +17,7 @@ network:
   version: 2
 ```
 
+把下面的命令写一个alias放进.bashrc中
 ```
 ssh -o StrictHostKeyChecking=no -l "dynamicx" "192.168.100.2"
 ```
@@ -22,4 +25,4 @@ ssh -o StrictHostKeyChecking=no -l "dynamicx" "192.168.100.2"
 ## 多台电脑调试一台车
 修改wifi设置的address和gateway的尾数为其他数字(如都更改为192.168.100.5)
 
-![alt text](md中的图片/配WIFI_多电脑.png)
+![alt text](../md中的图片/配WIFI_多电脑.png)
