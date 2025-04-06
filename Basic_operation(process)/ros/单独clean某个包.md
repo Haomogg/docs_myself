@@ -1,4 +1,4 @@
-首先`catkin clean`只能clean所有包
+首先`catkin clean XXX`删不干净
 
 **解决方法：** 手动删除包编译出来的东西
 
