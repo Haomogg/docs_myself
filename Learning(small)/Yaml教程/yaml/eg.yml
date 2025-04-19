@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+     driverClassName: com.mysql.cj.jdbc.Driver
+     url: jdbc:mysql://localhost:3306/springtest?serverTimezone=UTC&characterEncoding=utf8&useUnicode=true&useSSL=false
+     username: root
+     password: 123456
+     type: com.alibaba.druid.pool.DruidDataSource
+
+  thymeleaf:
+     prefix: classpath:/templates/
+     suffix: .html
+
+logging:
+  config: classpath:my-logback.xml
+

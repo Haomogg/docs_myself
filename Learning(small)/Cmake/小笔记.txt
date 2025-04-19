@@ -1,0 +1,26 @@
+1. 链接动态库的权限
+   PUBLIC：函数可以不断传递，且知道函数对应的是哪个库
+   PRIVATE：函数只能传递一次
+   INTERFACE:函数只能传递一次，不知道函数对应的是哪个库
+   
+   Tips：笔记中的符号==函数
+   
+2. 链接动态库的指令写在Cmakelist的最后(最后再链接)  
+   target_link_libraries(D A)
+   
+   链接静态库的指令写在add_library()(生成库文件)或者add_executable()(生成可执行文件)前面
+   eg：link_directories(${LIB_PATH})
+       link_libraries(${CALC_LIB})
+       set(EXECUTABLE_OUTPUT_PATH ${EXEC_PATH})
+       add_executable(${APP_NAME_1} ${SRC})
+
+3. 用set或list(APPEND xxx)拼接字符串时，在底层存储(底层管理)时自动在每个子字符串之间加分号(便于执行字符串删除时可以识别出删除哪一个)，输出时不会打印出分号
+
+5. 静态库 VS 动态库
+   静态库：生成可执行文件时就打包到可执行程序里了(内存会较大)
+   动态库：可执行文件运行时才调用(链接)动态库
+
+4. 动态库和静态库的选择
+   动态库：对应的源文件较多
+   静态库：对应的源文件较少
+

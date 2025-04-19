@@ -1,0 +1,2 @@
+指定拉 develop 分支代码：
+git clone -b develop http://gitslab.yiqing.com/declare/about.git

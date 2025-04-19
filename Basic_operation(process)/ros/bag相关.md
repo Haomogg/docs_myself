@@ -18,7 +18,7 @@
 2. scp移到自己电脑上
 
 3. 在自己电脑上播放bag
-   1. `rosparam set /use_sim_time true` —— 同步时间
+   1. `rosparam set /use_sim_time true` —— 同步时间，为了对上tf的时间戳
    2. `rosbag play xxxxx -l --clock --topic <topic1>`
     * `-r 0.5`:0.5倍速播放
     * `-l`:循环播放
@@ -64,3 +64,7 @@
 ## bag截取
 `rosbag filter 2.bag 2_output.bag "(topic =='/hk_camera/camera/image_raw/compressed' or topic =='/hk_camera/camera/camera_info') and (t.to_sec() >= 1742546121.004289 and t.to_sec() <=  1742546135.004289)"`
 * t.to_sec():bag中ros对应的时间戳，需要播放bag在终端复制
+
+
+
+

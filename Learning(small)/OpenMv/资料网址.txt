@@ -1,0 +1,8 @@
+Openmv官网:https://openmv.io/
+GitHub仓库:https://github.com/openmv/openmv
+IDE下载连接:https://openmv.io/pages/download
+快速参考手册:http://docs.openmv.io/openmvcam/quickref.html
+官方教程:http://docs.openmv.io/openmvcam/tutorial/index.html
+中文教程:https://book.openmv.cc/quick-starter.html
+创客海社区:http://makermare.com/forum-40-1.html
+星瞳科技:https://singtown.com/openmv/
