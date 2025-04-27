@@ -1,6 +1,10 @@
 ## 录bag和跑bag
 
-1. 跑程序后，在车上`rosbag record topic1 topic2 ....`,录完之后bag会存在当前文件夹下
+1. 录bag前
+   * 不要开rqt或者plotjuggler录
+   * 看下海康原图和/detection的帧率先
+
+2. 跑程序后，在车上`rosbag record topic1 topic2 ....`,录完之后bag会存在当前文件夹下
     **视觉一般需要录的topic：**
     * 相机的compressed
     * 相机的camera_info
@@ -10,14 +14,16 @@
     * /track
     * /change
     * /tf和/tf_static
+    * /controllers/shooter_controller/command(里面有mode可以看REANDY和PUSH)
+    * /controllers/gimbal_controller/error
   
     ```shell
-    rosbag record /hk_camera/camera/image_raw/compressed /hk_camera/camera/camera_info /Processor/digtialimg_proc/debug_image/compressed /processor/result_msg /detection /track /change /tf /tf_static
+    rosbag record /hk_camera/camera/camera_info /Processor/digtialimg_proc/debug_image/compressed /processor/result_msg /detection /track /change /tf /tf_static /controllers/shooter_controller/command /controllers/gimbal_controller/error
     ```
 
-2. scp移到自己电脑上
+3. scp移到自己电脑上
 
-3. 在自己电脑上播放bag
+4. 在自己电脑上播放bag
    1. `rosparam set /use_sim_time true` —— 同步时间，为了对上tf的时间戳
    2. `rosbag play xxxxx -l --clock --topic <topic1>`
     * `-r 0.5`:0.5倍速播放
@@ -29,6 +35,10 @@
     ```shell
     rosbag play xxx.bag -l --topics /processor/result_msg /hk_camera/camera/camera_info /track /tf /tf_static
     ```
+
+5. 验证bag
+   1. 看海康原图的帧率(165左右)
+   2. 看/detection帧率
 
 ## 看场上的bag
 **先看ros的bag，看哪个时间点视觉死了，再去对应的系统日志看视觉有没有死的消息**
