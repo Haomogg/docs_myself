@@ -13,7 +13,7 @@
 - 打开自己的代理软件，找到端口设置，发现代理挂在7897端口上
 
 
-![alt text](<Clash verge端口号.png>)
+![alt text](<../md中的图片/Clash verge端口号.png>)
 
 
 - 回到home目录下，找到gitconfig（windows回到用户目录下）
