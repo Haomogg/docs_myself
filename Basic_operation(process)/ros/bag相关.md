@@ -49,7 +49,7 @@
 * 操作：把对应的bag拉下来，加载进plotjuggler看曲线(可以把bag一次性加载进plotjuggler)(拉下来后可以先`rosbag info`看下时间点对不对)
 ![alt text](../md中的图片/ros的bag_1.png)
 ![alt text](../md中的图片/ros的bag_2.png)
-  * /rm_referee/game_status/stage_remain_time：可以看比赛开始的时间(读了裁判系统)，从300s开始倒数(比赛时间5min)
+  * /rm_referee/game_status/stage_remain_time：可以看比赛开始的时间(读了裁判系统)，联盟赛从300s开始倒数(比赛时间5min)，对抗赛从420s开始倒数(比赛时间7min)
   * /rm_referee/game_status/game_progress:比赛开始的标志位(4:比赛开始  1:准备中)
   * 可以看detection和track下的id看有无识别到装甲板
   * /detection/is_red: 0:我方为红方  1：我方不是红方
